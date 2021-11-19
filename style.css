@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 2rem;
   background-color: #2e2e2e;
+  background-image: url(./vendor/img/stand-meerkat.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 80%;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 }
 p,
@@ -22,7 +26,7 @@ a{
 }
 
 .wrapper {
-  background-color: #0f0f10;
+  background-color: #0f0f10de;
   border-radius: 0.5rem;
   height: 50vh;
   min-height: 35rem;
@@ -99,5 +103,9 @@ a{
   }
   .header-action {
     font-size: 0.7rem;
+  }
+  body {
+    padding: .5rem;
+    background-size: 70% auto ;
   }
 }
