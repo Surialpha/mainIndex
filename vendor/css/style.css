@@ -2,14 +2,16 @@ html {
   font-size: 16px;
 }
 body {
+  background-color: #2e2e2e;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   margin: 0;
   padding: 2rem;
-  background-color: #2e2e2e;
-  background-image: url(./vendor/img/stand-meerkat.png);
-  background-repeat: no-repeat;
+}
+.content-wrapper {
+  background-image: url(../img/stand-meerkat.png);
   background-position: center center;
-  background-size: auto 80%;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  background-repeat: no-repeat;
+  background-size: auto 85%;
 }
 p,
 span,
@@ -23,6 +25,7 @@ h6 {
 }
 a{
     color: rgb(0, 84, 241);
+    text-decoration: none;
 }
 
 .wrapper {
@@ -32,30 +35,30 @@ a{
   min-height: 35rem;
 }
 .header-action {
+  align-items: center;
+  background-color: #3a3a3a;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #c2c3c4;
   display: flex;
   flex-direction: row;
-  height: 2rem;
-  border-radius: 0.5rem 0.5rem 0 0;
-  background-color: #3a3a3a;
-  color: #c2c3c4;
   font-size: 0.8rem;
-  align-items: center;
+  height: 2rem;
 }
 .left-action-header {
+  align-items: center;
+  column-gap: 0.3rem;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   padding: 0 0.5rem;
-  column-gap: 0.3rem;
 }
 .center-action-header {
   padding: 0 1rem;
 }
 .action-header-menu {
-  width: 0.55rem;
-  height: 0.55rem;
   background-color: #c2c3c4;
   border-radius: 50%;
+  height: 0.55rem;
+  width: 0.55rem;
 }
 
 .action-header-menu:nth-child(1):hover {
@@ -73,18 +76,19 @@ a{
   cursor: pointer;
 }
 .content {
-    padding: 1rem .5rem;
     color: white;
     line-height: 1.5rem;
+    padding: 1rem .5rem;
 }
 .content #user-command{
     color: #78CB37 ;
 }
 .content #blank-space {
-    background-color: white;
-    padding: 0 .2rem;
-    margin: 0 .5rem;
     animation: blink 700ms infinite;
+    background-color: white;
+    cursor: text;
+    margin: 0 .5rem;
+    padding: 0 .2rem;
 }
 @keyframes blink {
     from {
@@ -97,15 +101,13 @@ a{
   }
 
 @media (max-width: 768px) {
-  .action-header-menu {
-    width: 0.4rem;
-    height: 0.4rem;
-  }
-  .header-action {
-    font-size: 0.7rem;
+  .header-action .content {
+    font-size: 0.6rem;
   }
   body {
     padding: .5rem;
-    background-size: 70% auto ;
+  }
+  .content-wrapper {
+    background-size: contain;
   }
 }
