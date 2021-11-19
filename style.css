@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: #2e2e2e;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+a{
+    color: rgb(0, 84, 241);
+}
+
+.wrapper {
+  background-color: #0f0f10;
+  border-radius: 0.5rem;
+  height: 50vh;
+  min-height: 35rem;
+}
+.header-action {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #3a3a3a;
+  color: #c2c3c4;
+  font-size: 0.8rem;
+  align-items: center;
+}
+.left-action-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0.5rem;
+  column-gap: 0.3rem;
+}
+.center-action-header {
+  padding: 0 1rem;
+}
+.action-header-menu {
+  width: 0.55rem;
+  height: 0.55rem;
+  background-color: #c2c3c4;
+  border-radius: 50%;
+}
+
+.action-header-menu:nth-child(1):hover {
+  background-color: #fd5f52;
+  cursor: pointer;
+}
+
+.action-header-menu:nth-child(2):hover {
+  background-color: #ffbb34;
+  cursor: pointer;
+}
+
+.action-header-menu:nth-child(3):hover {
+  background-color: #20c93f;
+  cursor: pointer;
+}
+.content {
+    padding: 1rem .5rem;
+    color: white;
+    line-height: 1.5rem;
+}
+.content #user-command{
+    color: #78CB37 ;
+}
+.content #blank-space {
+    background-color: white;
+    padding: 0 .2rem;
+    margin: 0 .5rem;
+    animation: blink 700ms infinite;
+}
+@keyframes blink {
+    from {
+        background-color: transparent;
+    }
+  
+    to {
+        background-color: white;
+    }
+  }
+
+@media (max-width: 768px) {
+  .action-header-menu {
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  .header-action {
+    font-size: 0.7rem;
+  }
+}
